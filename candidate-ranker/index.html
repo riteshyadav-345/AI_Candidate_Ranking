@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recruiter-Grade Candidate Ranker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">AI recruiting intelligence</p>
+        <h1>Recruiter-Grade Candidate Ranker</h1>
+      </div>
+      <div class="actions">
+        <button id="loadSample" type="button" title="Load sample profiles">Sample</button>
+        <button id="rankButton" type="button" title="Rank candidates">Rank</button>
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="Candidate ranking workspace">
+      <div class="input-pane">
+        <label for="roleInput">Role brief</label>
+        <textarea id="roleInput" spellcheck="true"></textarea>
+
+        <label for="candidatesInput">Candidate profiles</label>
+        <textarea id="candidatesInput" spellcheck="true"></textarea>
+      </div>
+
+      <div class="results-pane">
+        <div class="summary" id="summary" aria-live="polite"></div>
+        <div id="results" class="results"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
